@@ -70,3 +70,9 @@ hashmap.c:57:56: error: expected statement before ‘)’ token
 cc1: all warnings being treated as errors
 Compilation failed
 5f99c04
+Thu Apr  7 15:40:48 UTC 2022: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  4|5
+total_score: 20/70
+e08a3c5

@@ -248,3 +248,14 @@ hashmap.c:74:11: error: ‘index2’ is a pointer; did you mean to use ‘->’?
            ->
 Compilation failed
 3917c2b
+Thu Apr  7 16:10:42 UTC 2022: 
+ hashmap.c | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘createMap’:
+hashmap.c:70:17: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘.’ token
+     Pair* index2.buckets = (Pair *)malloc(sizeof(Pair)) ;
+                 ^
+hashmap.c:70:17: error: expected expression before ‘.’ token
+Compilation failed
+14ceb92

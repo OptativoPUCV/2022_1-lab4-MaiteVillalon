@@ -66,7 +66,7 @@ void enlarge(HashMap * map) {
 
 
 HashMap * createMap(long capacity) {
-    hashmap index2;
+    HashMap index2;
     index2->buckets =NULL;
     index2.capacity = NULL;
     index2.size = NULL;

@@ -122,3 +122,20 @@ hashmap.c:73:11: error: request for member ‘current’ in something not a stru
            ^
 Compilation failed
 3d5322d
+Thu Apr  7 15:56:10 UTC 2022: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘createMap’:
+hashmap.c:70:11: error: invalid type argument of ‘->’ (have ‘HashMap {aka struct HashMap}’)
+     index2->buckets =NULL;
+           ^~
+hashmap.c:71:21: error: assignment makes integer from pointer without a cast [-Werror=int-conversion]
+     index2.capacity = NULL;
+                     ^
+hashmap.c:72:17: error: assignment makes integer from pointer without a cast [-Werror=int-conversion]
+     index2.size = NULL;
+                 ^
+cc1: all warnings being treated as errors
+Compilation failed
+6cfb44d

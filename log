@@ -205,3 +205,23 @@ hashmap.c:76:1: error: control reaches end of non-void function [-Werror=return-
 cc1: all warnings being treated as errors
 Compilation failed
 4cf73c9
+Thu Apr  7 16:09:04 UTC 2022: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘createMap’:
+hashmap.c:69:22: error: invalid initializer
+     HashMap index2 = (HashMap *)malloc(sizeof(HashMap)) ;
+                      ^
+hashmap.c:70:20: error: assignment from incompatible pointer type [-Werror=incompatible-pointer-types]
+     index2.buckets = (Pair *)malloc(sizeof(Pair)) ;
+                    ^
+hashmap.c:75:12: error: incompatible types when returning type ‘HashMap {aka struct HashMap}’ but ‘HashMap * {aka struct HashMap *}’ was expected
+     return index2;
+            ^~~~~~
+hashmap.c:76:1: error: control reaches end of non-void function [-Werror=return-type]
+ }
+ ^
+cc1: all warnings being treated as errors
+Compilation failed
+d003739

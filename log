@@ -225,3 +225,26 @@ hashmap.c:76:1: error: control reaches end of non-void function [-Werror=return-
 cc1: all warnings being treated as errors
 Compilation failed
 d003739
+Thu Apr  7 16:10:14 UTC 2022: 
+ hashmap.c | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘createMap’:
+hashmap.c:70:17: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘->’ token
+     Pair* index2->buckets = (Pair *)malloc(sizeof(Pair)) ;
+                 ^~
+hashmap.c:70:17: error: expected expression before ‘->’ token
+hashmap.c:72:11: error: ‘index2’ is a pointer; did you mean to use ‘->’?
+     index2.capacity = capacity;
+           ^
+           ->
+hashmap.c:73:11: error: ‘index2’ is a pointer; did you mean to use ‘->’?
+     index2.size = 0;
+           ^
+           ->
+hashmap.c:74:11: error: ‘index2’ is a pointer; did you mean to use ‘->’?
+     index2.current = -1;
+           ^
+           ->
+Compilation failed
+3917c2b

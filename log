@@ -139,3 +139,13 @@ hashmap.c:72:17: error: assignment makes integer from pointer without a cast [-W
 cc1: all warnings being treated as errors
 Compilation failed
 6cfb44d
+Thu Apr  7 15:57:02 UTC 2022: 
+ hashmap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘createMap’:
+hashmap.c:70:11: error: invalid type argument of ‘->’ (have ‘HashMap {aka struct HashMap}’)
+     index2->buckets =NULL;
+           ^~
+Compilation failed
+f67bf2a

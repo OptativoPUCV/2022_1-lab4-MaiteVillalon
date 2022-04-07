@@ -60,13 +60,17 @@ void insertMap(HashMap * map, char * key, void * value) {
 
 void enlarge(HashMap * map) {
     enlarge_called = 1; //no borrar (testing purposes)
-
+    
 
 }
 
 
 HashMap * createMap(long capacity) {
-
+    hashmap index2;
+    index2->buckets =NULL;
+    index2->capacity = NULL;
+    index2->size = NULL;
+    index2->current = -1;
     return NULL;
 }
 

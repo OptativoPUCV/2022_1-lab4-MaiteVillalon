@@ -49,3 +49,24 @@ hashmap.c:57:56: error: expected statement before ‘)’ token
 cc1: all warnings being treated as errors
 Compilation failed
 519deb2
+Thu Apr  7 15:40:25 UTC 2022: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:57:34: error: expected expression before ‘)’ token
+   if ((double) map->size/(double)) map->capacity > 0.75) enlarge(map);
+                                  ^
+hashmap.c:57:39: error: statement with no effect [-Werror=unused-value]
+   if ((double) map->size/(double)) map->capacity > 0.75) enlarge(map);
+                                    ~~~^~~~~~~~~~
+hashmap.c:57:3: error: this ‘if’ clause does not guard... [-Werror=misleading-indentation]
+   if ((double) map->size/(double)) map->capacity > 0.75) enlarge(map);
+   ^~
+hashmap.c:57:56: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   if ((double) map->size/(double)) map->capacity > 0.75) enlarge(map);
+                                                        ^
+hashmap.c:57:56: error: expected statement before ‘)’ token
+cc1: all warnings being treated as errors
+Compilation failed
+5f99c04

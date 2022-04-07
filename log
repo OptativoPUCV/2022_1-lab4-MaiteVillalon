@@ -149,3 +149,17 @@ hashmap.c:70:11: error: invalid type argument of ‘->’ (have ‘HashMap {aka 
            ^~
 Compilation failed
 f67bf2a
+Thu Apr  7 15:57:44 UTC 2022: 
+ hashmap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘createMap’:
+hashmap.c:74:12: error: incompatible types when returning type ‘HashMap {aka struct HashMap}’ but ‘HashMap * {aka struct HashMap *}’ was expected
+     return index2;
+            ^~~~~~
+hashmap.c:75:1: error: control reaches end of non-void function [-Werror=return-type]
+ }
+ ^
+cc1: all warnings being treated as errors
+Compilation failed
+34cc36d

@@ -1,0 +1,51 @@
+Thu Apr  7 15:39:19 UTC 2022: 
+ hashmap.c | 16 +++++++++++++++-
+ 1 file changed, 15 insertions(+), 1 deletion(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:43:13: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+   long index* = hash(key, map->capacity);
+             ^
+hashmap.c:43:15: error: expected expression before ‘=’ token
+   long index* = hash(key, map->capacity);
+               ^
+hashmap.c:44:22: error: array subscript is not an integer
+   while (map->buckets[index] != NULL && map->buckets[index]->key != NULL)
+                      ^
+hashmap.c:44:53: error: array subscript is not an integer
+   while (map->buckets[index] != NULL && map->buckets[index]->key != NULL)
+                                                     ^
+hashmap.c:46:30: error: array subscript is not an integer
+     if (is_equal(map->buckets[index]->key,key) == 1 ) return;
+                              ^
+hashmap.c:47:25: error: invalid operands to binary % (have ‘char * (*)(const char *, int)’ and ‘long int’)
+     index = (index + 1) % map->capacity;
+             ~~~~~~~~~~~ ^ ~~~~~~~~~~~~~
+hashmap.c:49:19: error: array subscript is not an integer
+   if (map->buckets[index] != NULL)
+                   ^
+hashmap.c:51:17: error: array subscript is not an integer
+     map->buckets[index]->key = key;
+                 ^
+hashmap.c:52:17: error: array subscript is not an integer
+     map->buckets[index]->value = value;
+                 ^
+hashmap.c:55:17: error: array subscript is not an integer
+     map->buckets[index] = createPair(key,value);
+                 ^
+hashmap.c:57:34: error: expected expression before ‘)’ token
+   if ((double) map->size/(double)) map->capacity > 0.75) enlarge(map);
+                                  ^
+hashmap.c:57:39: error: statement with no effect [-Werror=unused-value]
+   if ((double) map->size/(double)) map->capacity > 0.75) enlarge(map);
+                                    ~~~^~~~~~~~~~
+hashmap.c:57:3: error: this ‘if’ clause does not guard... [-Werror=misleading-indentation]
+   if ((double) map->size/(double)) map->capacity > 0.75) enlarge(map);
+   ^~
+hashmap.c:57:56: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   if ((double) map->size/(double)) map->capacity > 0.75) enlarge(map);
+                                                        ^
+hashmap.c:57:56: error: expected statement before ‘)’ token
+cc1: all warnings being treated as errors
+Compilation failed
+519deb2

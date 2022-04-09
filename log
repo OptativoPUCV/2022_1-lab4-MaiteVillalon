@@ -296,3 +296,16 @@ Sat Apr  9 20:31:47 UTC 2022:
  tests:  5|4
 total_score: 30/70
 e8bb90b
+Sat Apr  9 21:00:26 UTC 2022: 
+ hashmap.c | 19 ++++++++++++++++---
+ 1 file changed, 16 insertions(+), 3 deletions(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:94:30: error: array subscript is not an integer
+     if (is_equal(map->buckets[index]->key,key) == 1 )
+                              ^
+hashmap.c:99:25: error: invalid operands to binary % (have ‘char * (*)(const char *, int)’ and ‘long int’)
+     index = (index + 1) % map->capacity;
+             ~~~~~~~~~~~ ^ ~~~~~~~~~~~~~
+Compilation failed
+fec52f7

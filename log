@@ -375,3 +375,13 @@ Sat Apr  9 21:42:58 UTC 2022:
  tests:  12|2
 total_score: 50/70
 bdb39a1
+Sat Apr  9 21:44:02 UTC 2022: 
+ hashmap.c | 4 ++++
+ 1 file changed, 4 insertions(+)
+In file included from test.c:4:0:
+hashmap.c: In function ‘firstMap’:
+hashmap.c:123:34: error: expected ‘)’ before numeric constant
+         if (map->buckets[i]->key 1= NULL)
+                                  ^
+Compilation failed
+de826c4

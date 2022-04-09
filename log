@@ -309,3 +309,13 @@ hashmap.c:99:25: error: invalid operands to binary % (have ‘char * (*)(const c
              ~~~~~~~~~~~ ^ ~~~~~~~~~~~~~
 Compilation failed
 fec52f7
+Sat Apr  9 21:01:05 UTC 2022: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:99:25: error: invalid operands to binary % (have ‘char * (*)(const char *, int)’ and ‘long int’)
+     index = (index + 1) % map->capacity;
+             ~~~~~~~~~~~ ^ ~~~~~~~~~~~~~
+Compilation failed
+92c740b

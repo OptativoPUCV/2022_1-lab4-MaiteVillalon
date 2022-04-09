@@ -120,7 +120,7 @@ Pair * firstMap(HashMap * map)
       if (map->buckets[i] != NULL)
       {
         map->current = i;
-        if (map->buckets[i]->key == NULL)
+        if (map->buckets[i]->key != NULL)
         {
           return map->buckets[i];
         }

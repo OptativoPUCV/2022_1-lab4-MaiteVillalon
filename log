@@ -290,3 +290,9 @@ In file included from test.c:2:0:
               ^~~~~~
 Compilation failed
 f98bef5
+Sat Apr  9 20:31:47 UTC 2022: 
+ hashmap.c | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+ tests:  5|4
+total_score: 30/70
+e8bb90b

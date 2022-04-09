@@ -385,3 +385,9 @@ hashmap.c:123:34: error: expected ‘)’ before numeric constant
                                   ^
 Compilation failed
 de826c4
+Sat Apr  9 21:44:10 UTC 2022: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  11|2
+total_score: 50/70
+eaafa00

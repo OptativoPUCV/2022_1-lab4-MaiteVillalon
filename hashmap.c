@@ -91,6 +91,7 @@ void eraseMap(HashMap * map,  char * key)
       map->buckets[index3]->key = NULL;
       //return map->buckets[index3];
     }
+  }
 
 
 }

@@ -89,9 +89,11 @@ void eraseMap(HashMap * map,  char * key)
     {
       map->current = index3;
       map->buckets[index3]->key = NULL;
-      //return map->buckets[index3];
+      map->size = map->size -1;
     }
+    index3 = (index3 + 1) % map->capacity;
   }
+  //index3 = (index3 + 1) % map->capacity;
 
 
 }

@@ -426,3 +426,14 @@ hashmap.c:139:9: error: expected ‘(’ before ‘map’
          ^~~
 Compilation failed
 691f10a
+Sun Apr 10 00:19:08 UTC 2022: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘nextMap’:
+hashmap.c:137:10: error: ‘i’ undeclared (first use in this function)
+    for ( i = map->current ; i < map->current ; i++)
+          ^
+hashmap.c:137:10: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+c2ac0cd

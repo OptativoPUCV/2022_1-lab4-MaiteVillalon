@@ -443,3 +443,14 @@ Sun Apr 10 00:19:15 UTC 2022:
  tests:  13|2
 total_score: 50/70
 ff57ead
+Sun Apr 10 00:23:25 UTC 2022: 
+ hashmap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘nextMap’:
+hashmap.c:139:49: error: ‘*map->buckets’ is a pointer; did you mean to use ‘->’?
+      if (map->buckets[i] != NULL && map->buckets->key != NULL)
+                                                 ^~
+                                                 ->
+Compilation failed
+079612d

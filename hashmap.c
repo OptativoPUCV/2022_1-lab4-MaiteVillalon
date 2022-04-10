@@ -61,17 +61,25 @@ void insertMap(HashMap * map, char * key, void * value) {
 void enlarge(HashMap * map) {
     enlarge_called = 1; //no borrar (testing purposes)
     Pair ** aux = calloc(map->capacity, sizeof(Pair*));
-    for (long i = map->current ; i < map->capacity ; i++)
+    
+    for (long i = 0 ; i < map->capacity ; i++)
     {
       if (map->buckets[i] != NULL && map->buckets[i]->key != NULL)
       {
-        strcpy(aux[i]->key,map->buckets[i]->key);
-        strcpy(aux[i]->value,map->buckets[i]->value);
+        aux[i] = create pair(map->buckets[i]->key, map->buckets[i]->value);
       }
     }
     map->capacity = (map->capacity * 2);
-    Pair ** map->buckets = calloc (map->capacity, sizeof(Pair*));
-    map->size = 0;
+    Pair ** auxNuevo = calloc (map->capacity, sizeof(Pair*));
+    map->buckets = auxNuevo;
+    for( long i = 0 ; i < map->capacity/2; i++)
+    {
+        if (aux[i] != NULL && aux[i]->key != NULL)
+        {
+          insertMap(map, aux[i]->key, aux[i]->value);
+        }
+    }
+  
   
 
 }

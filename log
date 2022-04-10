@@ -510,3 +510,18 @@ hashmap.c:73:16: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__at
 hashmap.c:73:16: error: expected expression before ‘->’ token
 Compilation failed
 20e9df1
+Sun Apr 10 23:41:18 UTC 2022: 
+ hashmap.c | 18 +++++++++++++-----
+ 1 file changed, 13 insertions(+), 5 deletions(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:69:18: error: ‘create’ undeclared (first use in this function); did you mean ‘createMap’?
+         aux[i] = create pair(map->buckets[i]->key, map->buckets[i]->value);
+                  ^~~~~~
+                  createMap
+hashmap.c:69:18: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c:69:25: error: expected ‘;’ before ‘pair’
+         aux[i] = create pair(map->buckets[i]->key, map->buckets[i]->value);
+                         ^~~~
+Compilation failed
+0fa7aa5

@@ -66,7 +66,7 @@ void enlarge(HashMap * map) {
     {
       if (map->buckets[i] != NULL && map->buckets[i]->key != NULL)
       {
-        aux[i] = create pair(map->buckets[i]->key, map->buckets[i]->value);
+        aux[i] = createPair(map->buckets[i]->key, map->buckets[i]->value);
       }
     }
     map->capacity = (map->capacity * 2);

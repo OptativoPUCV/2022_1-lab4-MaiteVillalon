@@ -525,3 +525,9 @@ hashmap.c:69:25: error: expected ‘;’ before ‘pair’
                          ^~~~
 Compilation failed
 0fa7aa5
+Sun Apr 10 23:41:29 UTC 2022: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  17|0
+total_score: 70/70
+7638ab2

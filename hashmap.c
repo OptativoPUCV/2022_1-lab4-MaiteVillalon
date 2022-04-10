@@ -134,7 +134,7 @@ Pair * firstMap(HashMap * map)
 
 Pair * nextMap(HashMap * map) 
 {
-   for ( i = map->current ; i < map->current ; i++)
+   for ( int i = map->current ; i < map->current ; i++)
    {
      if (map->buckets[i] != NULL)
      {

@@ -397,3 +397,18 @@ Sat Apr  9 21:44:32 UTC 2022:
  tests:  13|2
 total_score: 50/70
 2a914c8
+Sun Apr 10 00:16:38 UTC 2022: 
+ hashmap.c | 6 +++++-
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘nextMap’:
+hashmap.c:137:20: error: invalid type argument of ‘->’ (have ‘long int’)
+    if (map->current->next != null)
+                    ^~
+hashmap.c:137:30: error: ‘null’ undeclared (first use in this function); did you mean ‘nanl’?
+    if (map->current->next != null)
+                              ^~~~
+                              nanl
+hashmap.c:137:30: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+5d8f75c

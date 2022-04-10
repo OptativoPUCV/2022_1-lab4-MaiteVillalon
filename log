@@ -488,3 +488,14 @@ Sun Apr 10 00:43:39 UTC 2022:
  1 file changed, 10 insertions(+)
  tests:  0|0
 f924a29
+Sun Apr 10 00:45:33 UTC 2022: 
+ hashmap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:73:16: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘->’ token
+     Pair ** map->buckets =
+                ^~
+hashmap.c:73:16: error: expected expression before ‘->’ token
+Compilation failed
+d1096d4

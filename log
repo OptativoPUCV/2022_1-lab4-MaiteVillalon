@@ -412,3 +412,17 @@ hashmap.c:137:30: error: ‘null’ undeclared (first use in this function); did
 hashmap.c:137:30: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 5d8f75c
+Sun Apr 10 00:18:53 UTC 2022: 
+ hashmap.c | 7 +++++--
+ 1 file changed, 5 insertions(+), 2 deletions(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘nextMap’:
+hashmap.c:137:10: error: ‘i’ undeclared (first use in this function)
+    for ( i = map->current ; i < map->current ; i++)
+          ^
+hashmap.c:137:10: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c:139:9: error: expected ‘(’ before ‘map’
+      if map->buckets[i] != NULL
+         ^~~
+Compilation failed
+691f10a
